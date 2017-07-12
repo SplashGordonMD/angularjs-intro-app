@@ -1,23 +1,20 @@
-<h1>Angular 2 way binding code</h1>
-<div ng-app="app">
-{{ 34 / 2 }}
-  <div ng-controller="taskCtrl">
-   <p>{{ task1 }}</p>
-   <p>{{ task2 }}</p> 
-   <p>{{ task3 }}</p>
-   <h3>Add a Task</h3>
-   <input ne-model="task>"
-   <ol>
-    <li ng-repeat="loop in loops">
-      <p>{{ loop }}</p>
-    </li> 
-   	  <p>{{ loop }}</p>
-      <h3>Arrays</h3>
-    <li ng-repeat="array in arrays">{{ array }}</li>
-   <h3>Add a task</h3>
-   <input>
-   <button> ng-click="addTask()">Add a Task</button> 
-
+<h1>Angular 2 way binding code Floyd example</h1>
+<h3>Reviews</h3>
+<ul>
+ <li ng-repeat="task in tasks" ng-if="isPositive(task)">
+   <p>{{ task }}</p>
+   <input ng-model="review">
+   <p>{{ task.reviewer }} - {{ task.side }} - {{ task.name }}</p>
+   <input ng-model="review.task">
+ </li>
+<ul>
+<h3>Add a Review</h3>    
+  <input ng-model="newReviewTask">
+  <button ng-click="addReview(newReviewTask)">Add Review ></button>
+  <label>Review:</label><input ng-model="newReviewTask">
+  <label>Side:</label><input ng-model="newReviewSide">
+  <label>Name:</label><input ng-model="newReviewName">
+  <button> ng-click="addTask(newReviewTask, newReviewSide, newReviewName)">Add a Task</button> 
   </div>
  </div> 
 

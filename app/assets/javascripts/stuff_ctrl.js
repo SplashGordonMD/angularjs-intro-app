@@ -1,17 +1,23 @@
 (function() {
   "use strict";
 
-  angular.module("app").controller("taskCtrl", function($scope) {
-  	$scope.task1 = "Hey you, can you help them to berry the stone...";
-  	$scope.task2 = "Casey's review of Peter Jangs intro to Angular";
-  	$scope.task3 = 144 / 12;
-  	$scope.loops = ["Just", "one", "more", "morning" ];
-  	$scope.review = "Angular Exercise";
-  	$scope.arrays = ["Anybody", "Out", "There"];
+  angular.module("app").controller("stuffCtrl", function($scope) {
+  	$scope.reviews = [ 
+  		{task: "No Body Home", side: 2, reviewer: "Chewwy"},
+  		{task: "Confortable Numb", side: 3, reviewer: "Hagan"},
+  	    {task: "The Trial", side: 4, reviewer: "Ox"},
+  	    ];
 
-  	$scope.addTask = function() {
- 	  console.log("Me an my RC");
-  	}
-  });
- 
-}());
+  	$scope.addReview = function(inputTask) {
+  		$scope.reviews.push(inputTask);
+  	$scope.addReview = function(inputTask, inputSide, inputName) {
+  		var newReview = {task: inputTask, side: inputSide, name: inputName};
+ 	  $scope.reviewss.push(inputReview);
+  	};
+
+    $scope.isPositive = function(inputReviewTask) {
+    	return (inputReviewTask.indexOf("bad") === -1);
+    $scope.isPositive = function(inputReview) {
+    	return  (inputReview.Task.indexOf("bad") === -1);
+  };
+ });
