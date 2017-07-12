@@ -1,16 +1,23 @@
 <h1>Angular 2 way binding code</h1>
-
 <div ng-app="app">
-{{ 12 * 12 }}
+{{ 34 / 2 }}
   <div ng-controller="taskCtrl">
    <p>{{ task1 }}</p>
    <p>{{ task2 }}</p> 
    <p>{{ task3 }}</p>
-   <p>{{ review }}</p>
-   <h3>Arrays</h3>
-   <ul>
+   <h3>Add a Task</h3>
+   <input ne-model="task>"
+   <ol>
+    <li ng-repeat="loop in loops">
+      <p>{{ loop }}</p>
+    </li> 
+   	  <p>{{ loop }}</p>
+      <h3>Arrays</h3>
     <li ng-repeat="array in arrays">{{ array }}</li>
-   </ul> 
+   <h3>Add a task</h3>
+   <input>
+   <button> ng-click="addTask()">Add a Task</button> 
+
   </div>
  </div> 
 
