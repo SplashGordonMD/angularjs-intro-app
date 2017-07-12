@@ -12,9 +12,10 @@
   	  if (inputTask !=='')	{
   		$scope.tasks.push(inputTask);
   		$scope.newTask = '';
-  	 } else {
-  	 	console.log(inputTask);
-  	 }	
+  	 } 
+    };
+    $scope.completeTask = function() {
+  	   console.log("Complete!!!", inputTask);
     };
   });
 })(); 

@@ -4,7 +4,7 @@
  {{ 2 + 3 }}
   <div ng-controller="tasksCtrl" >
    <div ng-repeat="task in tasks">
-     <p>{{ task }}</p> 
+     <p ng-click="completeTask(task)">{{ task }}</p> 
      <input ng-model="task">
    </div>
    <h3>Add a new Song</h3> 
