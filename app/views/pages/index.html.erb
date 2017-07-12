@@ -1,20 +1,15 @@
 <h1>Angular 2 way binding code Floyd example</h1>
-<h3>Reviews</h3>
-<ul>
- <li ng-repeat="task in tasks" ng-if="isPositive(task)">
-   <p>{{ task }}</p>
-   <input ng-model="review">
-   <p>{{ task.reviewer }} - {{ task.side }} - {{ task.name }}</p>
-   <input ng-model="review.task">
- </li>
-<ul>
-<h3>Add a Review</h3>    
-  <input ng-model="newReviewTask">
-  <button ng-click="addReview(newReviewTask)">Add Review ></button>
-  <label>Review:</label><input ng-model="newReviewTask">
-  <label>Side:</label><input ng-model="newReviewSide">
-  <label>Name:</label><input ng-model="newReviewName">
-  <button> ng-click="addTask(newReviewTask, newReviewSide, newReviewName)">Add a Task</button> 
+
+<div ng-app="app">
+ {{ 2 + 3 }}
+  <div ng-controller="tasksCtrl" >
+   <div ng-repeat="task in tasks">
+     <p>{{ task }}</p> 
+     <input ng-model="task">
+   </div>
+   <h3>Add a new Song</h3> 
+   <input ng-model="newTask">
+   <button ng-click="addTask(newTask)">Add Song</button> 
   </div>
  </div> 
 
